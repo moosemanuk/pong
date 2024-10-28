@@ -3,10 +3,15 @@
 
 Ball::Ball()
 {
-    
+    this->x = SCREEN_WIDTH / 2;
+    this->y = SCREEN_HEIGHT / 2;
+    this->radius = BALL_RADIUS;
+    this->colour = white;
+    this->speed_x = BALL_XSPEED;
+    this->speed_y = BALL_YSPEED;
 }
 
-void Ball::draw()
+void Ball::draw() const
 {
     DrawCircle(x, y, radius, colour);
 }

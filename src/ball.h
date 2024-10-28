@@ -18,7 +18,7 @@ class Ball{
         bool computerScore = false;
         Color colour;
         Ball();
-        void draw();
+        void draw() const;
         void update();
         void resetBall();
 

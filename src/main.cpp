@@ -36,26 +36,6 @@ int main(){
     Sound pong_miss = LoadSound("pong_miss.mp3");
     Sound pong_hit = LoadSound("pong_hit.mp3");
 
-    // game objects
-    ball.x = screen_width/2;
-    ball.y = screen_height/2;
-    ball.radius = BALL_RADIUS;
-    ball.colour = white;
-    ball.speed_x = BALL_XSPEED;
-    ball.speed_y = BALL_YSPEED;
-    
-    player.x = screen_width - 40;
-    player.y = screen_height/2 - 60;
-    player.width = PADDLE_WIDTH;
-    player.height = PADDLE_HEIGHT;
-    player.colour = white;
-    
-    computer.x = 20;
-    computer.y = screen_height/2 - 60;
-    computer.width = PADDLE_WIDTH;
-    computer.height = PADDLE_HEIGHT;
-    computer.colour = white;
-    
     InitWindow(screen_width, screen_height, "pong");
     SetTargetFPS(target_fps);
 

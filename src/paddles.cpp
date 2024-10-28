@@ -3,7 +3,11 @@
 
 Paddle::Paddle()
 {
-    
+    this->x = SCREEN_WIDTH - 40;
+    this->y = SCREEN_HEIGHT / 2 - 60;
+    this->width = PADDLE_WIDTH;
+    this->height = PADDLE_HEIGHT;
+    this->colour = white;
 }
 
 void Paddle::draw()
@@ -35,7 +39,11 @@ void Paddle::limitMovement()
 
 CPUPaddle::CPUPaddle()
 {
-
+    this->x = 20;
+    this->y = SCREEN_HEIGHT / 2 - 60;
+    this->width = PADDLE_WIDTH;
+    this->height = PADDLE_HEIGHT;
+    this->colour = white;
 }
 
 void CPUPaddle::draw()
