@@ -4,11 +4,12 @@
 namespace constants
 {
     // custom colours
-    const Color white = {255,255,255,255};
+    const Color PONGWHITE = {255,255,255,255};
 
     // screen
     const int SCREEN_WIDTH = 1280;
     const int SCREEN_HEIGHT = 800;
+    const int TARGET_FPS = 60;
 
     // game objects
     const float BALL_RADIUS = 15;

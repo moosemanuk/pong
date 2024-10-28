@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClInclude Include="src\ball.h" />
     <ClInclude Include="src\constants.h" />
+    <ClInclude Include="src\game.h" />
     <ClInclude Include="src\paddles.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ball.cpp" />
+    <ClCompile Include="src\game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\paddles.cpp" />
   </ItemGroup>

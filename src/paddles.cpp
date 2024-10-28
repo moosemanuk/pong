@@ -7,27 +7,27 @@ Paddle::Paddle()
     this->y = SCREEN_HEIGHT / 2 - 60;
     this->width = PADDLE_WIDTH;
     this->height = PADDLE_HEIGHT;
-    this->colour = white;
+    this->colour = WHITE;
 }
 
-void Paddle::draw()
+void Paddle::Draw() const
 {
-    DrawRectangle(x, y, width, height, colour);
+    DrawRectangle((int)x, (int)y, (int)width, (int)height, colour);
 }
 
-void Paddle::update()
+void Paddle::Update()
 {
     if(IsKeyDown(KEY_DOWN)){
-        y += PADDLE_SPEED;        
+        this->y += PADDLE_SPEED;        
     }
 
     if(IsKeyDown(KEY_UP)){
-        y -= PADDLE_SPEED;        
+        this->y -= PADDLE_SPEED;        
     }
-    limitMovement();
+    LimitMovement();
 }
 
-void Paddle::limitMovement()
+void Paddle::LimitMovement()
 {
     if(y <= 0){
         y =0;
@@ -43,22 +43,22 @@ CPUPaddle::CPUPaddle()
     this->y = SCREEN_HEIGHT / 2 - 60;
     this->width = PADDLE_WIDTH;
     this->height = PADDLE_HEIGHT;
-    this->colour = white;
+    this->colour = WHITE;
 }
 
-void CPUPaddle::draw()
+void CPUPaddle::Draw()
 {
-    DrawRectangle(x, y, width, height, colour);
+    DrawRectangle((int)x, (int)y, (int)width, (int)height, colour);
 }
 
-void CPUPaddle::update(float ballHeight)
+void CPUPaddle::Update(float ballHeight)
 {
-    if(y + PADDLE_HEIGHT/2 > ballHeight){
-        y -= PADDLE_SPEED;
+    if(this->y + PADDLE_HEIGHT/2 > ballHeight){
+        this->y -= PADDLE_SPEED;
     }
     
-    if(y + PADDLE_HEIGHT/2 <= ballHeight){
-        y += PADDLE_SPEED;
+    if(this->y + PADDLE_HEIGHT/2 <= ballHeight){
+        this->y += PADDLE_SPEED;
     }
-    limitMovement();    
+    LimitMovement();    
 }

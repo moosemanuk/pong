@@ -3,20 +3,20 @@
 
 Ball::Ball()
 {
-    this->x = SCREEN_WIDTH / 2;
-    this->y = SCREEN_HEIGHT / 2;
+    this->x = static_cast<float>(SCREEN_WIDTH) / 2;
+    this->y = static_cast<float>(SCREEN_HEIGHT) / 2;
     this->radius = BALL_RADIUS;
-    this->colour = white;
+    this->colour = WHITE;
     this->speed_x = BALL_XSPEED;
     this->speed_y = BALL_YSPEED;
 }
 
-void Ball::draw() const
+void Ball::Draw() const
 {
-    DrawCircle(x, y, radius, colour);
+    DrawCircle((int)x, (int)y, radius, colour);
 }
 
-void Ball::update()
+void Ball::Update()
 {
     x += speed_x;
     y += speed_y;  
@@ -31,20 +31,20 @@ void Ball::update()
 
     if(x + BALL_RADIUS >= SCREEN_WIDTH){
         computerScore = true;
-        resetBall();        
+        ResetBall();        
     }
 
     if(x - BALL_RADIUS <= 0){
         playerScore = true;
-        resetBall();
+        ResetBall();
     }
 
 }
 
-void Ball::resetBall()
+void Ball::ResetBall()
 {
-    x = SCREEN_WIDTH / 2;
-    y = SCREEN_HEIGHT / 2;
+    x = static_cast<float>(SCREEN_WIDTH) / 2;
+    y = static_cast<float>(SCREEN_HEIGHT) / 2;
 
     time_t seconds = time(NULL);
     if(seconds % 2 == 0 ){

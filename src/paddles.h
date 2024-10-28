@@ -15,9 +15,9 @@ class Paddle{
         float height;
         float speed = PADDLE_SPEED;
         Color colour;
-        void draw();
-        void update();
-        void limitMovement();
+        void Draw() const;
+        void Update();
+        void LimitMovement();
 };
 
 class CPUPaddle: public Paddle{
@@ -25,7 +25,7 @@ class CPUPaddle: public Paddle{
 
     public:
         CPUPaddle();
-        void draw();
-        void update(float ballHeight);
+        void Draw();
+        void Update(float ballHeight);
 };
 
