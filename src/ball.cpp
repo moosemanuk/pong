@@ -46,13 +46,23 @@ void Ball::ResetBall()
     x = static_cast<float>(SCREEN_WIDTH) / 2;
     y = static_cast<float>(SCREEN_HEIGHT) / 2;
 
-    time_t seconds = time(NULL);
-    if(seconds % 2 == 0 ){
-        speed_x *= -1;
-    }
-    else{
-        speed_x *= 1;
-    }
-    
+    int x = GetRandomValue(0, 3);
+    int y = GetRandomValue(0, 3);
 
+    if (x == 0)
+    {
+        if (y == 1)
+        {
+            speed_y *= -1;
+        }
+    }
+
+    if (x == 1)
+    {
+        speed_x *= -1;
+        if (y == 1)
+        {
+            speed_y *= -1;
+        }
+    }
 }
