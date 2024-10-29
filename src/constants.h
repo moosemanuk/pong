@@ -13,8 +13,8 @@ namespace constants
 
     // game objects
     const float BALL_RADIUS = 15;
-    const float BALL_XSPEED = 7; 
-    const float BALL_YSPEED = 7; 
+    const float BALL_XSPEED = 10; 
+    const float BALL_YSPEED = 10; 
     const float PADDLE_WIDTH = 25;
     const float PADDLE_HEIGHT = 120;
     const float PADDLE_SPEED = 5;
