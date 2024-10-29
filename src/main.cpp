@@ -19,6 +19,7 @@ int main(){
         EndDrawing();
     }
 
+    game.Cleanup();
     CloseWindow();
     return 0;
 
